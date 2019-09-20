@@ -23,8 +23,13 @@ else
 flap = 1;
 if ((firstChar < 57 || secondChar < 57) && flap == 0)
 {
+if (firstChar == 56 && secondChar == 57)
+;
+else
+{
 putchar(',');
 putchar(' ');
+}
 }
 }
 }
