@@ -16,7 +16,7 @@ for (secondChar = 48 ; secondChar < 58 ; secondChar++)
 if (firstChar != secondChar && firstChar < secondChar)
 {
 putchar(firstChar);
-putChar(secondChar);
+putchar(secondChar);
 flap = 0;
 }
 else
