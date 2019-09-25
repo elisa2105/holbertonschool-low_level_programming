@@ -10,10 +10,10 @@ void print_to_98(int n)
 int w;
 if (n < 98)
 {
-for (w = n; w < 99: w++)
+for (w = n; w < 99; w++)
 {
-printf("%d",w);
-if(w == 98)
+printf("%d", w);
+if (w == 98)
 ;
 else
 printf(", ");
@@ -24,7 +24,7 @@ else if (n > 98)
 {
 for (w = n; w > 98 ; w++)
 {
-printf("%d",w);
+printf("%d", w);
 if (w == 98)
 ;
 else
