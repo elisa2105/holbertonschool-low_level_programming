@@ -22,7 +22,7 @@ putchar('\n');
 }
 else if (n > 98)
 {
-for (w = n; w >= 98 ; w++)
+for (w = n; w >= 98 ; w--)
 {
 printf("%d", w);
 if (w == 98)
