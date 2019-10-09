@@ -24,7 +24,7 @@ return (p);
 */
 int is_prime_number(int n)
 {
-int x= 0;
-x = _is_Prime(n, 2);
+int x= 2;
+x = _is_Prime(n, x);
 return (x);
 }
