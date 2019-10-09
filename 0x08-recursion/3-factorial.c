@@ -15,6 +15,6 @@ if (n <= 1)
 return (1);
 aux = n;
 n--;
-fac = aux * factorial(n);
+fac = aux *factorial(n);
 return (fac);
 }
