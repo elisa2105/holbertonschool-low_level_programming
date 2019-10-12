@@ -10,25 +10,25 @@
 int main(int argc, char *argv[])
 {
 int cont;
-int a;
-if (argc == 1)
+int a = 0;
+int s;
+if(argc < 2)
 {
 printf("0\n");
 return (0);
 }
-else
-{
 for (cont = 1; cont < argc; cont++)
 {
-if (isdigit(*argv[cont]) && argv[cont] != '\0')
-a += atoi(argv[cont]);
-else
+ for(s = 0; argv[cont][s] != '\0'; s++)
+{
+if(!(isdigit(argv[cont][s])))
 {
 printf("Error\n");
 return (1);
 }
 }
-printf("%d\n", a);
+a += atoi(argv[cont]);
 }
+printf("%d\n", a);
 return (0);
 }
