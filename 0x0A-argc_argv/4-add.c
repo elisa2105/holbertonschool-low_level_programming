@@ -19,7 +19,7 @@ else
 {
 for (cont = 1; cont < argc; cont++)
 {
-if (isdigit(*argv[cont]))
+if (isdigit(*argv[cont]) && argv[cont] != '\0')
 a += atoi(argv[cont]);
 else
 {
