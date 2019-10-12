@@ -5,10 +5,7 @@
  * @accept: string
  * Return: a pointer to the memory area.
  */
-
 char *_strpbrk(char *s, char *accept)
 {
-
-
 return (s);
 }
