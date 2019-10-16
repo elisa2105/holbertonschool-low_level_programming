@@ -2,22 +2,18 @@
 #include <stdlib.h>
 #include <stdio.h>
 /**
- * strlen_recursion - prints the lenght of a string
+ * strlenmv - prints the lenght of a string
  * @s: string
  * Return:  length of a string.
 */
 
-int strlen_recursion(char *s)
+int strlenmv(char *s)
 {
+int i =  0;
 int count = 0;
-
-if (*s != 0)
-{
-s++;
-count = 1 + strlen_recursion(s);
+for ( ; s && s[i]; i++)
+count++;
 return (count);
-}
-return (0);
 }
 
 /**
@@ -32,7 +28,7 @@ char *array;
 int i = 0;
 int j = 0;
 int count = 0;
-count = strlen_recursion(s1) + strlen_recursion(s2) + 1;
+count = strlenmv(s1) + strlenmv(s2) + 1;
 array = malloc(sizeof(char) * count);
 if (array == NULL)
 return (NULL);
