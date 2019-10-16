@@ -10,6 +10,7 @@ char *leet(char *s)
 	int count = 0;
 	char str1[] = "aAeEoOtTlL";
 	char str2[] = "4433007711";
+
 	while (s[count] != '\0')
 	{
 		for (i = 0; str1[i] != '\0'; i++)
