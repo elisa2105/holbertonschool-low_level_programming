@@ -30,19 +30,18 @@ return (s);
 */
 char *argstostr(int ac, char **av)
 {
-int s = 0;
-int a = 0;
-int b = 0;
-int c;
+int s, a, b, c;
 char *arr;
 if (ac == 0 || av == NULL)
 return (NULL);
 s =  size(ac, av);
 arr = malloc(s + 1);
-for (; a < ac; a++, b++)
+for (b = 0, a = 0; a < ac; a++, b++)
 {
 for (c = 0; av[a][c] != '\0'; c++, b++)
+{
 arr[b] = av[a][c];
+}
 arr[b] = '\n';
 }
 arr[b] = '\0';
