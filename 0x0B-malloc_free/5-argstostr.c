@@ -14,7 +14,7 @@ int count = 0;
 int s = 0;
 for (; i < ac; i++)
 {
-for (; av[i][j] != '\0'; i++)
+for (; av[i][j] != '\0'; j++)
 count++;
 }
 s = count + ac;
