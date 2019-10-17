@@ -10,8 +10,8 @@
 void print_diagsums(int *a, int size)
 {
 int i = 0;
-sumaDiag1 = 0;
-sunaDiag2 = 0;
+int sumaDiag1 = 0;
+int sumaDiag2 = 0;
 
 for (; i < (size * size); i = i + size + 1)
 sumaDiag1 += a[i];
