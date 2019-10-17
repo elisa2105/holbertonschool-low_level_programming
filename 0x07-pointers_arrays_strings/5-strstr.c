@@ -14,9 +14,9 @@ if (*needle == '\0')
 return (haystack);
 for (; *haystack != '\0'; haystack++)
 {
-if(*haystack == needle[0])
+if (*haystack == needle[0])
 {
-if(strcmpmv(haystack,needle))
+if (strcmpmv(haystack, needle))
 return (haystack);
 }
 }
@@ -36,7 +36,7 @@ for (; s2[s] != '\0'; s++)
 ;
 for (; i < s; i++)
 {
-if(s1[i] != s2[i])
+if (s1[i] != s2[i])
 return (0);
 }
 return (1);
