@@ -10,5 +10,5 @@ void print_diagsums(int *a, int size);
 void set_string(char **s, char *to);
 void print_chessboard(char (*a)[8]);
 char *_strstr(char *haystack, char *needle);
-char *strcmpmv(char *s1, char *s2);
+int strcmpmv(char *s1, char *s2);
 #endif

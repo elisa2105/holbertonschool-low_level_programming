@@ -8,14 +8,17 @@
  */
 char *_strstr(char *haystack, char *needle)
 {
-int i;
-char *p = NULL;
-for (i = 0; haystack[i] != '\n'; i++)
+if (haystack == NULL || needle == NULL)
+return (NULL);
+if (*needle == '\0')
+return (haystack);
+for (; *haystack != '\0'; haystack++)
 {
-if (haystack[i] == needle[0])
-p = strcmpmv((haystack + i), needle);
-if (p != NULL)
-return (p);
+if(*haystack == needle[0])
+{
+if(strcmpmv(haystack,needle))
+return (haystack);
+}
 }
 return (NULL);
 }
@@ -25,13 +28,16 @@ return (NULL);
  * @s2: string
  * Return: if they are not equal return null
  */
-char *strcmpmv(char *s1, char *s2)
+int strcmpmv(char *s1, char *s2)
 {
-int i;
-for (i = 0; s1[i] != '\0' && s2[i] != '\0'; i++)
-if (s1[i] != s2[i])
+int i = 0;
+int s = 0;
+for (; s2[s] != '\0'; s++)
+;
+for (; i < s; i++)
 {
-return (NULL);
+if(s1[i] != s2[i])
+return (0);
 }
-return (s1);
+return (1);
 }
