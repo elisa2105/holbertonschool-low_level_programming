@@ -18,7 +18,7 @@ sumaDiag1 += a[i];
 
 for (i = 0 ; i < (size * size) - size ;)
 {
-i = i + size -1;
+i = i + size - 1;
 sumaDiag2 += a[i];
 }
 printf("%d, %d\n", sumaDiag1, sumaDiag2);
