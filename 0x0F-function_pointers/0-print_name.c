@@ -2,14 +2,13 @@
 #include <stdlib.h>
 /**
  * print_name - prints buffer in hexa
- * @name: the address of memory to print
- * @siz  : the size of the memory to print
- *
+ * @name: name to print
+ * @f  : pointer to the function
  * Return: Nothing.
  */
 void print_name(char *name, void (*f)(char *))
 {
 if (name == NULL || f == NULL)
-return; 
+return;
 f(name);
 }
