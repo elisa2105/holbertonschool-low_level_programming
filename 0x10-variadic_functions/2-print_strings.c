@@ -18,7 +18,7 @@ va_start(list_var, n);
 for (; i < n; i++)
 {
 str = va_arg(list_var, char *);
-if (separator != NULL && i != 0)
+if (separator != NULL && i != (n - 1))
 printf("%s", separator);
 if (str == NULL)
 printf("(nil)");
