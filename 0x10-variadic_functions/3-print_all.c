@@ -16,25 +16,30 @@ va_list list_var;
 va_start(list_var, format);
 while (format && format[i] !='\0')
 {
-switch (format[i++])
+switch (format[i])
 {
 case 'c':
+i++;
 printf("%c", va_arg(list_var, int));
 break;
 case 'i':
+i++;
 printf("%d", va_arg(list_var, int));
 break;
 case 'f':
+i++;
 printf("%f", va_arg(list_var, double));
 break;
 case 's':
+i++;
 str = va_arg(list_var, char*);
 if (str == NULL)
 str = "(nil)";
 printf("%s", str);
 break;
 default:
-break;
+i++;
+continue;
 }
 if (format[i] != '\0')
 printf(", ");
