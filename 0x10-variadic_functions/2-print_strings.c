@@ -3,7 +3,7 @@
 #include <stdarg.h>
 #include <stdio.h>
 /**
- * prints_strings - prints strings.
+ * print_strings - prints strings.
  * @n: cant arguments
  * @separator: separator between strings
  * Description: print all its parameters..
@@ -25,7 +25,6 @@ printf("%s", str);
 
 if (separator != NULL && i != (n - 1))
 printf("%s", separator);
-
 }
 va_end(list_var);
 printf("\n");
