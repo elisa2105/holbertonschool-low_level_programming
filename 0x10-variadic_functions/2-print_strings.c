@@ -4,10 +4,9 @@
 #include <stdio.h>
 /**
  * prints_strings - prints strings.
- * @n:number of arguments
- * @...: arguments
+ * @n: cant arguments
  * @separator: separator between strings
- * Return: the sum of the arguments.
+ * Description: print all its parameters..
  */
 void print_strings(const char *separator, const unsigned int n, ...)
 {
@@ -18,12 +17,15 @@ va_start(list_var, n);
 for (; i < n; i++)
 {
 str = va_arg(list_var, char *);
+
+if (str == NULL)
+str = "(nil)";
+
+printf("%s", str);
+
 if (separator != NULL && i != (n - 1))
 printf("%s", separator);
-if (str == NULL)
-printf("(nil)");
-else
-printf("%s", str);
+
 }
 va_end(list_var);
 printf("\n");
