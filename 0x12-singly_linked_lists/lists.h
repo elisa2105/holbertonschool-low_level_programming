@@ -2,11 +2,11 @@
 #define _HOLBERTON_H_
 #include <stdlib.h>
 #include <stdio.h>
-typedef struct list
+typedef struct list_s
 {
-char *s;
-unsigned int l;
-struct list *n;
+char *str;
+unsigned int len;
+struct list_s *next;
 }list_t;
 
 int _putchar(char c);
