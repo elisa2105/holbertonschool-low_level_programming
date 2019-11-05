@@ -14,8 +14,6 @@ return (NULL);
 node = malloc(sizeof(listint_t));
 node->n = n;
 node->next = NULL;
-if (node == NULL)
-return (NULL);
 if (*head == NULL)
 {
 *head = node;
@@ -24,5 +22,5 @@ return (*head);
 while (t->next != NULL)
 t = t->next;
 t->next = node;
-return (*head);
+return (node);
 }
