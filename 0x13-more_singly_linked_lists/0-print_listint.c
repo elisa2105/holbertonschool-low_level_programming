@@ -7,13 +7,15 @@
 size_t print_listint(const listint_t *h)
 {
 size_t i;
-if (h == NULL)
+const listint_t *x;
+x = h;
+if (x == NULL)
 return (0);
-for (i = 1; h->next != NULL; i++)
+for (i = 1; x->next != NULL; i++)
 {
-printf("%d\n", h->n);
-h = h->next;
+printf("%d\n", x->n);
+x = x->next;
 }
-printf("%d\n", h->n);
+printf("%d\n", x->n);
 return (i);
 }
