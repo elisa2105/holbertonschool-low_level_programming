@@ -10,7 +10,7 @@ listint_t *t = *head;
 int node = 0;
 if (head == NULL)
 return (0);
-if(*head == NULL)
+if (*head == NULL)
 return (0);
 node = t->n;
 *head = t->next;
