@@ -1,22 +1,19 @@
 #include "lists.h"
 /**
- * print_list - prints all the elements of a list_t list.
+ * print_listint - prints all the elements of a list_t list.
  * @h: type struct
  * Return: Number of nodes
  */
 size_t print_listint(const listint_t *h)
 {
-int i = 1;
+size_t i = 1;
 if (h == NULL)
 return (0);
-for (; h->next != NULL ; i++)
+for (; h->next != NULL; i++)
 {
-if (h->str == NULL)
-printf("[0] (nil)\n");
-else
-printf("[%u] %s\n", h->len, h->str);
+printf("%d\n", h->n);
 h = h->next;
 }
-printf("[%u] %s\n", h->len, h->str);
+printf("%d\n", h->n);
 return (i);
 }
