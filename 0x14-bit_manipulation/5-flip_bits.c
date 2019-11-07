@@ -7,13 +7,25 @@
  */
 unsigned int flip_bits(unsigned long int n, unsigned long int m)
 {
-unsigned int i = 0;
 unsigned int p;
-p = n ^ m;
-while (p)
+p = bits(n ^ m);
+return (p);
+}
+
+/**
+ * bits - number of bits to flip to get from one number to another.
+ * @x: number
+ * Return: number of bits to flip
+ */
+unsigned int bits(unsigned long x)
 {
-i += p & 1;
-p >>= 1;
+unsigned int i = 0;
+while (x)
+{
+i += x & 1;
+x >>= 1;
 }
 return (i);
 }
+
+
