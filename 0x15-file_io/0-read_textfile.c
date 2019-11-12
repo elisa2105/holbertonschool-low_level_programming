@@ -20,7 +20,7 @@ if (n != -1)
 j = read(n, text, letters);
 else
 j = 0;
-text[letters] = '\0';
+text[j] = '\0';
 i = write(STDOUT_FILENO, text, j);
 if (i == -1)
 j = 0;
