@@ -24,7 +24,7 @@ text[letters] = '\0';
 i = write(STDOUT_FILENO, text, j);
 if (i == -1)
 j = 0;
-close(d);
+close(n);
 free(text);
 return (j);
 }
