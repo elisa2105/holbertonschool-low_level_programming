@@ -53,7 +53,7 @@ _error1(go);
 out = open(to, O_CREAT | O_WRONLY | O_TRUNC, 0664);
 if (out == -1)
 {
-dprintf(STDERR_FILENO, "Error: Can't write to 1 %s", to);
+dprintf(STDERR_FILENO, "Error: Can't write to %s\n", to);
 exit(99);
 }
 do {
@@ -63,18 +63,18 @@ _error1(go);
 j = read(out, buffer, i);
 if (j == -1 || j != i)
 {
-dprintf(STDERR_FILENO, "Error: Can't write to 2 %s", to);
+dprintf(STDERR_FILENO, "Error: Can't write to %s\n", to);
 exit(99);
 }
 } while (i == 1024);
 if (close(in) == -1)
 {
-dprintf(STDERR_FILENO, "Error: Can't close fd %s", go);
+dprintf(STDERR_FILENO, "Error: Can't close fd %s\n", go);
 exit(100);
 }
 if  (close(out) == -1)
 {
-dprintf(STDERR_FILENO, "Error: Can't close fd %s", to);
+dprintf(STDERR_FILENO, "Error: Can't close fd %s\n", to);
 exit(100);
 }
 return (0);
