@@ -47,20 +47,25 @@ int cp(char *go, char *to)
 {
 int in, out, i, j;
 char buffer[1024];
+
 in = open(go, O_RDONLY);
+
 if (in == -1)
 _error1(go);
+
 out = open(to, O_CREAT | O_WRONLY | O_TRUNC, 0664);
+
 if (out == -1)
 {
 dprintf(STDERR_FILENO, "Error: Can't write to %s\n", to);
 exit(99);
 }
+
 do {
 i = read(in, buffer, 1024);
 if (i == -1)
 _error1(go);
-j = read(out, buffer, i);
+j = write(out, buffer, i);
 if (j == -1 || j != i)
 {
 dprintf(STDERR_FILENO, "Error: Can't write to %s\n", to);
