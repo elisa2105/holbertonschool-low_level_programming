@@ -30,10 +30,11 @@ if (t->next != NULL)
 t->next->prev = t->prev;
 if (t->prev != NULL)
 t->prev->next = t->next;
-}
 free(t);
-count++;
 return (1);
+}
+t = t->next;
+count++;
 }
 return (-1);
 }
