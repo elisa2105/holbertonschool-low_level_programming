@@ -26,9 +26,9 @@ return (node);
 dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 {
 dlistint_t *node;
-dlistint_t *t;
+dlistint_t *t = *h;
 unsigned int i = 0;
-if (head == NULL)
+if (h == NULL)
 return (NULL);
 node = new(n);
 if (node == NULL)
