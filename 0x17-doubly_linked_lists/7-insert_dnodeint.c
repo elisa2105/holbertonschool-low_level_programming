@@ -55,7 +55,7 @@ if (t->next != NULL)
 t->next->prev = node;
 node->next = t->next;
 t->next = node;
-nodo->prev = t;
+node->prev = t;
 return (node);
 }
 t = t->next;
