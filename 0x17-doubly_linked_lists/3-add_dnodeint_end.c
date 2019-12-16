@@ -15,7 +15,7 @@ if (nnode == NULL)
 return (NULL);
 nnode = malloc(sizeof(dlistint_t));
 nnode->n = n;
-node->next = NULL;
+nnode->next = NULL;
 
 if ((*head) == NULL)
 {
