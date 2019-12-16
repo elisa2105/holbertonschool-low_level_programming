@@ -13,12 +13,12 @@ return (NULL);
 new = malloc(sizeof(dlistint_t));
 if (new == NULL)
 return (NULL);
-if (*head != NULL)
-{
+
 new->next = *head;
 new->n = n;
 new->prev = NULL;
+if (*head != NULL)
+*head->prev = new;
 *head = new;
-}
 return (*head);
 }
