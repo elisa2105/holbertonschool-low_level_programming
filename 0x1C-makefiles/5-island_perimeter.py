@@ -3,7 +3,8 @@
 Interview prep question island perimeter
 """
 
-def  island_perimeter(grid):
+
+def island_perimeter(grid):
     """
     Function to return the perimeter
     Arguments:
