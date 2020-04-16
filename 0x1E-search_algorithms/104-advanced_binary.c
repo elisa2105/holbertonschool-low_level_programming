@@ -1,6 +1,6 @@
 #include "search_algos.h"
 /**
- * binary_search - searching for a value
+ * advanced_binary - searching for a value
  * @array: the array
  * @size: size of the array
  * @value: the value to be found
@@ -33,11 +33,6 @@ return (binasearch(array, max, min, size, value));
  * @size: the size
  * @value: the value to be found
  * Return: the index of the value
- * display - print every subarray
- * @array : A vector is a one-dimensional array
- * @left : left index
- * @right : right index
- * Return: none
  */
 
 int binasearch(int *array, size_t max, size_t min, size_t size, int value)
