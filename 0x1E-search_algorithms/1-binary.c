@@ -41,7 +41,7 @@ size_t middle = size / 2 + min;
 display(array, min, max);
 
 if (array[middle] == value)
-return (value);
+return (middle);
 
 if (array[middle] < value)
 {
